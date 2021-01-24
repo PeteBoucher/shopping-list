@@ -45,3 +45,16 @@ Mums list has more than just Fruit and Veg, there are other sections. We should 
 3. create a new List of Lists called `shopping_list` and populate it with fruit_and_veg and meat:
 `shopping_list = [meat, fruit_and_veg]`
 4. observe both lists are shown on the page but inline as 2 items
+5. update the template to create nested unordered lists for each section
+```html
+<ul>
+    {% for section in list %}
+    <li>Section</li>
+        <ul>
+            {% for item in section %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</ul>
+```
