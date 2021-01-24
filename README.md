@@ -37,3 +37,11 @@ to build the `<ul>` unordered list html.
 ### Bonus activity
 1. Configure Flask in debug mode so that you dont have to break and restart the server after every code edit:
 `export FLASK_DEBUG=true`
+
+### Section 2
+Mums list has more than just Fruit and Veg, there are other sections. We should have them all shown on the page.
+1. remane the `shopping_list` variable to `fruit_and_veg`
+2. add a new List for the meat section called `meat`
+3. create a new List of Lists called `shopping_list` and populate it with fruit_and_veg and meat:
+`shopping_list = [meat, fruit_and_veg]`
+4. observe both lists are shown on the page but inline as 2 items
