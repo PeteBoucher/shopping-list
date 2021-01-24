@@ -12,8 +12,8 @@ Create a shopping list and let pyton print it to the command line
 ### Section 2
 1. Import Flask and use pip to install it `pip3 install flask`
 2. Follow the [Quickstart](https://flask.palletsprojects.com/en/1.1.x/quickstart/) example in the Flask docs to create 
-a simple flask page
-3. Replace the `hello world` function with one that outputs your list to the page as a string using `''.join(shopping_list)`
+and test a simple flask page
+3. Replace the `hello_world` function with one that outputs your list to the page as a string using `''.join(shopping_list)`
 4. Observe output is not readable, all the items are smooshed together in one line
 5. Modify the function to  build an `output` String from the list as an unordered list `<ul>` in HTML
 ### Bonus activity

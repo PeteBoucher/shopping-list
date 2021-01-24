@@ -1,5 +1,5 @@
 # Python program to manage the Mercadona shop
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -21,12 +21,7 @@ shopping_list = ["EGGS X24",
 
 @app.route('/')
 def index():
-    output = "<ul>"
-    for item in shopping_list:
-        output += "<li>" + item + "</li>"
-    output = output + "</ul>"
-    print(output)
-    return output
+    return render_template('list.html', list=shopping_list)
 
 
 def print_shopping_list():
