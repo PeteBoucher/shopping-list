@@ -24,8 +24,8 @@ and test a simple flask page
 7. Push to a public repo `git remote add origin [MY_REPO] && git push`
 
 ## Lesson 2
-Output the list via an html template
-### Section 1
+Output the list via an html template (60 mins)
+
 1. Import render_template
 2. remove the code from `index()` that builds the html code around the list and simply return the  result of a call to 
 render_template() with the template filename and list passed as arguments:
@@ -35,26 +35,6 @@ render_template() with the template filename and list passed as arguments:
 to build the `<ul>` unordered list html.
 
 ### Bonus activity
-1. Configure Flask in debug mode so that you dont have to break and restart the server after every code edit:
+1. Configure Flask in debug mode so that you don't have to break and restart the server after every code edit:
 `export FLASK_DEBUG=true`
 
-### Section 2
-Mums list has more than just Fruit and Veg, there are other sections. We should have them all shown on the page.
-1. remane the `shopping_list` variable to `fruit_and_veg`
-2. add a new List for the meat section called `meat`
-3. create a new List of Lists called `shopping_list` and populate it with fruit_and_veg and meat:
-`shopping_list = [meat, fruit_and_veg]`
-4. observe both lists are shown on the page but inline as 2 items
-5. update the template to create nested unordered lists for each section
-```html
-<ul>
-    {% for section in list %}
-    <li>Section</li>
-        <ul>
-            {% for item in section %}
-            <li>{{ item }}</li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
-</ul>
-```
