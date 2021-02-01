@@ -6,8 +6,13 @@
 <body>
 <h1>Shopping List</h1>
 <ul>
-    {% for item in list %}
-    <li>{{ item }}</li>
+    {% for section in list %}
+    <li>Section</li>
+        <ul>
+            {% for item in section %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
     {% endfor %}
 </ul>
 
